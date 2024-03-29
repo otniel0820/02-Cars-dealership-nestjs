@@ -5,6 +5,7 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  //Pipe Global
   app.useGlobalPipes(
     new ValidationPipe({
     whitelist: true,// Limpia la data que mandan en el endpoint  si no esta definida en DTO
